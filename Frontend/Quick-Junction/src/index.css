@@ -77,148 +77,198 @@ button:focus-visible {
 }
 
 /* footer*/
-footer { 
-background-color: #000000;
-width: 100%;
-height: auto;
-border-radius: 10px;
-color: #ffffff;
-bottom: 0;
-    background-color: #e70838;
-background: linear-gradient(to right,#f0083a,#e60303);
-font-size: 13px;
-line-height: 20px;
+.footer {
+background: linear-gradient(to right,#d10733,#e70202);
+  color: #222;
+  font-family: "Poppins", sans-serif;
+  padding: 60px 80px 20px;
+  border-top: 1px solid #e4e4e4;
+}
+.client-logos{
 
+   height: 100px;
+}
+.client-logos img {
+   width: 150px;     /* smaller size for icons */
+  height: 50px;    /* keeps them square */
+  margin: 35px;   /* adds spacing between icons */
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.contact-banner {
+  position: relative;
+  background-image: url("C:/Quick-Junction.lk/Frontend/Quick-Junction/images/call-center-rep-640x230.jpg");
+  background-size: cover;         
+  background-position: center;    
+  background-repeat: no-repeat;   
+  height: 300px;                  
+  width: 100%;
+  display: flex;                  
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
 }
 
-.fbdy{
-    width: 85%;
-    margin: 1px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    
+/* dark layer 
+.contact-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
 }
-.col{
-    flex-basis:20%;
-    padding: 15px;
-    margin-left: 50px;
- 
+*/
+.banner-image{
+padding-right: 370px;
+width: 50px;
 }
-.col:nth-child(2), .col:nth-child(3){
-    flex-basis: 15%;
+
+.banner-image img {
+   width: 150px;     /* smaller size for icons */
+  height: 150px;    /* keeps them square */
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+  padding-left: 270px;
 }
-.lgo{
-    width: 80px;
-    margin-bottom: 30px;
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
 }
-.col h3{
-    width: fit-content;
-    margin-bottom: 50px;
-    position: relative;
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
 }
-.email-id{
-width: fit-content;
-border-bottom: 1px solid #ccc;
-margin: 20px 0;
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #000;
 }
-.fot li{
-    list-style: none;
-    margin-bottom: 12px;
-    width: 100px;
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
 }
-.fot li a{
-    text-decoration: none;
-    color: #ffffff;
-    width: 100px;
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s;
 }
-form{
-    padding-bottom: 15px;
-    align-items: center ;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    margin-bottom: 50px;
+
+.footer-section ul li:hover {
+  color: #007bff;
 }
-.email{
-    background-color: #ffffff;
-    border: 0;
-    outline: none;
-    width: 160px;
-   
+
+.subscribe-box {
+  display: flex;
+  margin-top: 10px;
 }
-.mail{
-    width: 20px;
-    height: 40px;
+
+.subscribe-box input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px 0 0 25px;
+  outline: none;
 }
-.bmail{
-    width: 30px;
-    height: 40px;
-    background: #1b151500;
+
+.subscribe-box button {
+  background-color: #1a56db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.bmail img{
-    height: 30px;
+
+.subscribe-box button:hover {
+  background-color: #1545b3;
 }
-.social-icon img{
-    border-radius: 50%;
+
+.footer-section small {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #fffdfd;
+}
+
+.footer .social-icons img {
+  width: 24px;     /* smaller size for icons */
+  height: 24px;    /* keeps them square */
+  margin: 0 8px;   /* adds spacing between icons */
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.footer .social-icons img:hover {
+  transform: scale(1.1);  /* slight zoom on hover */
+  opacity: 0.8;           /* subtle fade effect */
+}
+
+
+.footer comment {
+  color: #000000;
+}
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.footer-bottom h3.brand {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.bottom-links p {
+  margin: 0 10px;
+  display: inline;
+  color: #000000;
+  cursor: pointer;
+}
+
+.bottom-links p:hover {
+  color: #000;
+}
+
+.social-icons i {
+  margin: 0 8px;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.social-icons i:hover {
+  color: #007bff;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
     text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    margin-left: 9px;
-    cursor: pointer;
-}
-.social-icon :hover{
-    transform: scale(1.1);
-    z-index: 5;
-}
-footer hr {
-    width: 90%;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    margin: 20px auto
-}
-.copyright{
-    text-align: center;
-}
-.underline{
-    width: 100%;
-    height: 5px;
-    background: #767676;
-    border-radius: 3px;
-    position: absolute;
-    top: 25px;
-    left: 0;
-   /* overflow: hidden;*/
-}
-.underline span{
-    width: 15px;
-    height: 100%;
-    background: #ffffff;
-    border-radius: 3px;
-    position: absolute;
-    top: 0;
-    left: 10px;
-    animation: moving 2s linear infinite;
-}
-@keyframes moving{
-    0%{
-        left: 20px;
-    }
-    100%{
-        left: 100px;
-    }
-}
+  }
 
-@media (max-width:700px){
-    footer{
-        bottom: unset;
-    }
-    .col{
-        flex-basis:100%;
-     
-    }
-    .col:nth-child(2), .col:nth-child(3){
-        flex-basis: 15%;
-    }
+  .bottom-links {
+    margin: 10px 0;
+  }
 }

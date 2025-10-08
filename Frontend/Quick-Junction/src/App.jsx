@@ -1,6 +1,6 @@
 import Header from "./Header"
 import Footer from "./footer"
-
+import './index.css';
 
 function App() {
  
