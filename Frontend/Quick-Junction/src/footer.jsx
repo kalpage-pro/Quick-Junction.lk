@@ -14,26 +14,28 @@ function Footer() {
           <img src="/images/merck-1-e1637145445707.png" alt="Merck Logo" />
         </div>
 <br /><br />
-        {/* ##############################
+        {/* 
             # SECTION 2: CONTACT BANNER #
-            ############################## */}
+             */}
         <div className="contact-banner">
           <div className="banner-text">
             <h2>Contact Us for Legal Assistance</h2>
-            <p>Experienced lawyers ready to fight for your rights</p>
+            <p>Experienced supporters ready to ready for your problems</p>
             <div className="banner-buttons">
-              <button className="btn-dark">Our areas of Law</button>
+              <button className="btn-dark">Our areas of resources</button>
               <button className="btn-light">
                 New successes <span>→</span>
               </button>
             </div>
           </div>
 
-          <div className="banner-image">
+       { /*  <div className="banner-image">
             <img src="/images/Amazon-logo.png" alt="Contact Banner" />
           </div>
-        </div>
-
+        */}
+        
+          </div>
+          <br />
         {/* 
         Links and Subscription
         */}
@@ -84,11 +86,12 @@ function Footer() {
 
         <hr />
 
-        {/* ##############################
-            # SECTION 4: BOTTOM FOOTER #
-            ############################## */}
+        {/* 
+           footer bottom
+           
+        */}
         <div className="footer-bottom">
-          <h3 className="brand">Mingers.</h3>
+          <h3 className="brand">by Minidu</h3>
 
           <div className="bottom-links">
             <p>Privacy Policy</p>

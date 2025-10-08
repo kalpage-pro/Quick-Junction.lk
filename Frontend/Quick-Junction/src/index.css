@@ -1,3 +1,15 @@
+/* Remove default spacing everywhere */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Optional: set the page background color */
+body {
+  background-color: #1f1f1f;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -68,13 +80,123 @@ button:focus-visible {
 }
 
 
-/* title */
-.title{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: #e70838;
+/* header */
+
+.title-bar{
+background-color: #000000;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
 }
+.title{
+    text-align: right;
+    background-color: #e70838;
+    font-size: 80px;
+     flex-wrap: wrap;
+  justify-content: space-between;
+ 
+}
+/* Login button */
+.emp{
+  background-color:  #2e2d2d;
+  color: #ffffff;
+  border: none;
+  padding: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 50px;
+  margin-left: 250px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.emp:hover {
+  transition: color 0.5s;
+  background-color:#ffffff;
+  color: #000000;
+}
+
+.signup {
+  background-color:  #2e2d2d;
+  color: #ffffff;
+  border: none;
+  padding: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.signup:hover {
+  transition: color 0.5s;
+  background-color:#ffffff;
+  color: #000000;
+}
+
+.category{
+    text-align: center;
+    background-color: #e70838;
+    font-size: 5px;
+
+}
+.category ul{
+    background-color: #e70838;
+    list-style: none;
+    position: relative;
+    border-bottom: #ffffff;
+    border-radius: 10px;
+    
+}
+.category ul li {
+    padding: auto;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 20px;
+}
+.category button {
+    background-color: #e70838;
+    color: white;
+    border-color: rgb(12, 14, 14);
+    border-style: hidden;
+    cursor: pointer;
+}
+
+.category ul li :hover {
+    transition: color 0.3s;
+    border-radius: 5px;
+    color:#007bff;
+}
+
+
+
+
+
+
+
+/*body*/
+.body {
+  max-width: 100%;
+  height: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* footer*/
 .footer {
@@ -109,7 +231,10 @@ background: linear-gradient(to right,#d10733,#e70202);
   color: rgb(0, 0, 0);
   overflow: hidden;
 }
-
+.banner-text {
+  padding-right: 500px;                   
+  text-align: center;
+}
 /* dark layer 
 .contact-banner::before {
   content: "";
