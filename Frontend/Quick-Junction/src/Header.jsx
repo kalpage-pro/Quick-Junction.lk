@@ -3,12 +3,17 @@ function Header(){
     return(
         <header>
            <div className="title-bar">
-             <div className="title">Quick Junction.lk <button className="emp">For Employers</button>
-             <button className="signup">login</button>
+            <div className="title">Quick Junction.lk 
+      
+              <input type="email" placeholder="Find" className="find"/>
+              <button className="search">Search</button>
+         
+            <button className="emp">For Employers</button>
+            <button className="signup">Login</button>
+            <button className="chat">Chat</button>
+            </div> 
+           </div>
 
-             
-             </div> 
-          </div>
            <div className="category"><h1><ul>
             <li><a href="#"><button>Home</button></a></li>
                 <li><a href="#"><button>Menu</button></a></li>
