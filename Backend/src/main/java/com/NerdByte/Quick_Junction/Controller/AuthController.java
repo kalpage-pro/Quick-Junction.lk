@@ -1,6 +1,6 @@
 package com.NerdByte.Quick_Junction.Controller;
 
-import com.NerdByte.Quick_Junction.DAO.UserRepository;
+import com.NerdByte.Quick_Junction.Repository.UserRepository;
 import com.NerdByte.Quick_Junction.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;

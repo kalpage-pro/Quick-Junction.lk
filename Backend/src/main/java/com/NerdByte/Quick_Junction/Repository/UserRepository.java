@@ -1,4 +1,4 @@
-package com.NerdByte.Quick_Junction.DAO;
+package com.NerdByte.Quick_Junction.Repository;
 
 import com.NerdByte.Quick_Junction.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
