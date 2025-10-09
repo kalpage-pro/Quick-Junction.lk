@@ -1,0 +1,15 @@
+ http://localhost:5173/
+
+
+
+npm install   ---
+
+
+cd C:\Quick-Junction.lk\Frontend\quick-junction
+
+npm install react-router-dom
+
+npm run dev
+
+
+
