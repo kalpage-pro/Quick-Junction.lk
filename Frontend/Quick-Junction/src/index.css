@@ -7,7 +7,7 @@
 
 /* Optional: set the page background color */
 body {
-  background-color: #1f1f1f;
+background: linear-gradient(135deg, #f0f4ff, #d6e0ff);
 }
 
 :root {
@@ -91,7 +91,7 @@ background-color: #000000;
 }
 .title{
     text-align: right;
-    background-color: #e70838;
+    background-color: #ff6b6b;
     font-size: 80px;
     flex-wrap: wrap;
   justify-content: space-between;
@@ -212,12 +212,12 @@ background-color: #000000;
 
 .category{
     text-align: center;
-    background-color: #e70838;
+    background-color: #ff6b6b;
     font-size: 5px;
 
 }
 .category ul{
-    background-color: #e70838;
+    background-color: #ff6b6b;
     list-style: none;
     position: relative;
     border-bottom: #ffffff;
@@ -231,7 +231,7 @@ background-color: #000000;
     padding: 5px 20px;
 }
 .category button {
-    background-color: #e70838;
+    background-color: #ff6b6b;
     color: white;
     border-color: rgb(12, 14, 14);
     border-style: hidden;
@@ -257,7 +257,7 @@ background-color: #000000;
   margin: 0 auto;
   padding: 20px;
   font-family: "Poppins", sans-serif;
-  color: #ffffff;
+  color: #000000;
 }
 
 .card {
@@ -305,7 +305,7 @@ box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1);
 
 /* footer*/
 .footer {
-background: linear-gradient(to right,#d10733,#e70202);
+background: linear-gradient(to right,#ff6b6b,#ff8e53);
   color: #222;
   font-family: "Poppins", sans-serif;
   padding: 60px 80px 20px;
@@ -502,3 +502,140 @@ hr {
     margin: 10px 0;
   }
 }
+
+
+
+/* Login/Signup page styles */
+.left-panel {
+  flex: 1;
+  padding:40px;
+  color:#fff;
+  background: linear-gradient(135deg,#ff6b6b,#ff8e53);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:8px;
+  align-items:flex-start;
+}
+.left-panel h2 { letter-spacing:2px; }
+.logo { font-size:36px; font-weight:700; margin:6px 0; transform:scaleX(1.02); }
+.sign-left { background: linear-gradient(135deg,#ff8e53,#ffa98a); color:#fff; }
+
+/* Right panel (form) */
+.right-panel { flex: 1; padding: 36px; background: #fff; }
+.right-panel h3 { color:#d04a3f; margin-bottom:16px; }
+.social-row { display:flex; gap:10px; margin-bottom:12px; }
+.social { flex:1; padding:8px; border-radius:6px; border:1px solid #eee; cursor:pointer; background:#313030; }
+.or-divider { text-align:center; color:#242323; margin:10px 0; }
+
+/* Form styles */
+.auth-form { display:flex; flex-direction:column; gap:12px; }
+.auth-form input { padding:10px; border-radius:6px; border:1px solid #eee; font-size:14px; }
+.form-row { display:flex; justify-content:flex-end; }
+.forgot { color:#6b9bd6; font-size:13px; text-decoration:none; }
+.login-btn { padding:10px; border-radius:8px; border:none; background: linear-gradient(180deg,#f16353,#d94a3b); color:#fff; cursor:pointer; font-weight:700; }
+.signup-line { color:#999; margin-top:8px; font-size:14px; }
+.error { color: #a94442; background: #f9d6d6; padding:8px; border-radius:6px; }
+
+/* Main wrapper centers everything in the viewport */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;              /* full screen height */
+  width: 1355px;
+  background: linear-gradient(135deg, #f0f4ff, #d6e0ff);
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+/* The card itself */
+.auth-card {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 700px;
+  max-width: 90%;
+}
+
+/* Left side (welcome message) */
+.left-panel {
+  background-color: #2b4eff;
+  color: #fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.left-panel h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.left-panel p {
+  font-size: 15px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* Right side (form) */
+.right-panel {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #2b4eff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #1a37cc;
+}
+
+.error {
+  color: red;
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.toggle-text {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.toggle-link {
+  color: #2b4eff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 500;
+}
+

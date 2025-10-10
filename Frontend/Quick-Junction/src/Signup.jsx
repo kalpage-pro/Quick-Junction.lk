@@ -1,42 +1,66 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 function Signup() {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("user");
+  const [name, setName] = useState("");
+  const [err, setErr] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleSignup = async (e) => {
+  const submit = async (e) => {
     e.preventDefault();
+    setErr("");
+    setLoading(true);
 
-    await fetch("http://localhost:8080/api/auth/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password, role }),
-    });
+    try {
+      const res = await fetch("/api/auth/signup", { // change to your endpoint
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password })
+      });
 
-    alert("Account created! Please login.");
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.message || "Signup failed");
+      }
+
+      // success
+      setLoading(false);
+      navigate("/login");
+    } catch (error) {
+      setLoading(false);
+      setErr(error.message);
+    }
   };
 
   return (
-    <div>
-      <h2>Signup</h2>
-      <form onSubmit={handleSignup}>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        /><br/>
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        /><br/>
-        <select value={role} onChange={(e) => setRole(e.target.value)}>
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-        </select><br/>
-        <button type="submit">Signup</button>
-      </form>
+    <div className="auth-wrapper">
+      <div className="auth-card small">
+        <div className="left-panel sign-left">
+          <h2>Create Account</h2>
+          <p>Join Quick Junction.lk — it's quick and free.</p>
+        </div>
+
+        <div className="right-panel">
+          <form className="auth-form" onSubmit={submit}>
+            <input required placeholder="Full name" value={name} onChange={(e) => setName(e.target.value)} />
+            <input required type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input required type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+
+            {err && <div className="error">{err}</div>}
+
+            <button className="login-btn" type="submit" disabled={loading}>
+              {loading ? "Signing up..." : "SIGN UP"}
+            </button>
+
+            <div style={{ marginTop: 10 }}>
+              Already a user? <a href="/login">Login</a>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

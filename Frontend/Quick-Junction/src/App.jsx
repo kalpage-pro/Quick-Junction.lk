@@ -4,6 +4,8 @@ import Footer from "./footer";
 import Body from "./body";
 import Card from "./Card";
 import Login from "./Login";
+import Signup from "./Signup";  
+import AuthPage from "./AuthPage";
 import './index.css';
 
 function HomePage() {
@@ -11,6 +13,10 @@ function HomePage() {
     <>
       <Header />
       <Body />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
       <Card />
       <Card />
       <Card />
@@ -26,9 +32,12 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/Signup" element={<Signup />} />
+        <Route path="/auth" element={<AuthPage />} />
       </Routes>
     </Router>
   );
 }
+
 
 export default App;
