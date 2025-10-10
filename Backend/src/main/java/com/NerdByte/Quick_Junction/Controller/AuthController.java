@@ -1,37 +1,29 @@
 package com.NerdByte.Quick_Junction.Controller;
 
-import com.NerdByte.Quick_Junction.Repository.UserRepository;
 import com.NerdByte.Quick_Junction.Model.User;
+import com.NerdByte.Quick_Junction.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:3000") // React app port
 public class AuthController {
 
     @Autowired
-    private UserRepository userRepository;
-
-    @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody User user) {
-        Optional<User> foundUser = userRepository.findByUsernameAndPassword(
-                user.getUsername(), user.getPassword());
-
-        if (foundUser.isPresent()) {
-            return ResponseEntity.ok(foundUser.get());
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                    .body("Invalid username or password");
-        }
-    }
+    private UserService userService;
 
     @PostMapping("/signup")
-    public ResponseEntity<?> signup(@RequestBody User user) {
-        userRepository.save(user);
-        return ResponseEntity.ok("User registered successfully");
+    public User register(@RequestBody User user) {
+        return userService.registerUser(user);
+    }
+
+    @PostMapping("/login")
+    public User login(@RequestBody User user) {
+        User loggedIn = userService.login(user.getUsername(), user.getPassword());
+        if (loggedIn == null) {
+            throw new RuntimeException("Invalid username or password");
+        }
+        return loggedIn;
     }
 }

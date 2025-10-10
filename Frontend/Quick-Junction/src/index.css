@@ -91,7 +91,7 @@ background-color: #000000;
 }
 .title{
     text-align: right;
-    background-color: #ff6b6b;
+   background: linear-gradient(to right,#ff6b6b,#ff8e53);;
     font-size: 80px;
     flex-wrap: wrap;
   justify-content: space-between;
@@ -212,12 +212,12 @@ background-color: #000000;
 
 .category{
     text-align: center;
-    background-color: #ff6b6b;
+    background: linear-gradient(to right,#ff6b6b,#ff8e53);;
     font-size: 5px;
 
 }
 .category ul{
-    background-color: #ff6b6b;
+   background: linear-gradient(to right,#ff6b6b,#ff8e53);;
     list-style: none;
     position: relative;
     border-bottom: #ffffff;
@@ -231,7 +231,7 @@ background-color: #000000;
     padding: 5px 20px;
 }
 .category button {
-    background-color: #ff6b6b;
+  background: linear-gradient(to right,#ff5656,#fc3e3e);;
     color: white;
     border-color: rgb(12, 14, 14);
     border-style: hidden;
@@ -266,7 +266,7 @@ background-color: #000000;
   overflow: hidden;
   box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  background-color: #2e2d2d;
+ background: linear-gradient(to right,#ff6b6b,#ff8e53);
   margin: 41px;
   padding: 20px;
   max-width: 250px;

@@ -9,5 +9,4 @@ class QuickJunctionApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
